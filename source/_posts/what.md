@@ -1,6 +1,8 @@
 ---
 title: one
 date: 2017-05-01
+tags:
+- test
 ---
 
 Not much is going on here. That's right.

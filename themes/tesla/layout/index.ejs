@@ -1,11 +1,34 @@
-<div class='ui stackable grid'>
+<div class="ui stackable grid">
 
-  <div class='four wide column'>
-    <%- partial('_partial/profile') %>
+  <div class="four wide column">
+    <div class="ui red raised segment">
+      <%- partial('_partial/profile') %>
+    </div>
+    <div class="ui vertical segment">
+      <h4>Recent Posts</h4>
+      <%- list_posts({order: 'desc'}) %>
+    </div>
+    <div class="ui vertical segment">
+      <h4>Tags</h4>
+      <%- tagcloud({
+        color: true,
+        order: 'desc',
+        start_color: 'grey',
+        end_color: 'red'
+      }) %>
+    </div>
+    <div class="ui vertical segment">
+      <h4>Categories</h4>
+      <%- list_categories() %>
+    </div>
+    <div class="ui vertical segment">
+      <h4>Archives</h4>
+      <%- list_archives() %>
+    </div>
   </div>
 
-  <div class='twelve wide column'>
-    <div class='ui divided items'>
+  <div class="twelve wide column">
+    <div class="ui divided items">
       <% page.posts.each(function(post) { %>
         <%- partial('_partial/post', { post: post }) %>
       <% }) %>
