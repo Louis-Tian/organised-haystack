@@ -1,7 +1,7 @@
 <div class="ui stackable grid">
 
   <div class="four wide column">
-    <div class="ui red raised segment">
+    <div class="ui teal raised segment">
       <%- partial('_partial/profile') %>
     </div>
     <div class="ui vertical segment">
@@ -27,15 +27,17 @@
     </div>
   </div>
 
-  <div class="content">
-    <div class="twelve wide column">
+  <div class="twelve wide column">
+    <div class="post">
       <div class="ui divided items">
         <% page.posts.each(function(post) { %>
           <%- partial('_partial/post', { post: post }) %>
         <% }) %>
       </div>
-      <%- partial('_partial/paginator') %>
     </div>
+
+    <%- partial('_partial/paginator') %>
+
   </div>
 
 </div>

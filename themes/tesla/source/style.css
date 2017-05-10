@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+
 body {
-  min-height: 600px;
   margin-top: 20px;
 }
 
-.logo {
+ui.logo.image {
   width: 100px;
-  display: inline-block;
 }
-.title {
-  display: inline-block;
+
+.page.title.ui.header  {
+  font-size: 30pt;
+  font-family: 'Bungee Shade';
 }
