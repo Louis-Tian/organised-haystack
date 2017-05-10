@@ -1,0 +1,25 @@
+<div class="ui item">
+  <div class="content">
+    <div class="ui stackable grid">
+      <div class="twelve wide column">
+        <h1><%- post.title %></h1>
+        <h3><%- post.subtitle %></h3>
+        <div class='ui divider'></div>
+        <%- post.content %>
+      </div>
+      <div class="four wide column">
+        <div>
+          <%- date(post.date, 'DD MMM YYYY') %>
+        </div>
+        <div class="tiny ui labeled button" tabindex="0">
+          <div class="tiny ui button">
+            <i class="heart icon"></i> Like
+          </div>
+          <a class="ui basic label">
+            2,048
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

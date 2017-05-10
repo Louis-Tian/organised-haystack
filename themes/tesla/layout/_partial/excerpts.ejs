@@ -1,0 +1,15 @@
+<div class='ui divided items'>
+  <% page.posts.each(function(post) { %>
+    <div class="item">
+      <div class="content">
+        <div class="meta">
+          <span><%- post.date %></span>
+        </div>
+        <a class="header"><%- post.title %></a>
+        <div class="description">
+          <p><%- post.excerpt %></p>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+</div>

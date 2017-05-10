@@ -1,0 +1,38 @@
+
+<div class="ui grid">
+
+  <div class="four wide column">
+    <% if (page.prev) { %>
+    <a href='<%= url_for(page.prev_link) %>'>
+      <div class="tiny left floated ui animated button" tabindex="0">
+          <div class="visible content">
+            Previous
+          </div>
+          <div class="hidden content">
+            <i class="left arrow icon"></i>
+          </div>
+      </div>
+    </a>
+    <% } %>
+  </div>
+
+  <div class="center aligned four wide column">
+      <%- page.current %> / <%- page.total %>
+  </div>
+
+  <div class='four wide column'>
+    <% if (page.next) { %>
+    <a href='<%= url_for(page.next_link) %>'>
+    <div class="tiny right floated ui animated button" tabindex="0">
+      <div class="visible content">
+        Next
+      </div>
+      <div class="hidden content">
+          <i class="right arrow icon"></i>
+      </div>
+    </div>
+    </a>
+    <% } %>
+
+  </div>
+</div>
