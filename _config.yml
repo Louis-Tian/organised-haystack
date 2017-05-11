@@ -68,4 +68,6 @@ theme: tesla
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: git@github.com:Louis-Tian/Louis-Tian.github.io.git
+  branch: master
