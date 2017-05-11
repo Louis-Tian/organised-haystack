@@ -1,7 +1,8 @@
-# LouisT Personal Website + Blog 
+## Louis Tian's Blog
 
-powered by Hexo.js and Semantic.js
+© Louis Tian
+Full right reserved
 
- 
-
-
+powered by
+* [Hexo](https://hexo.io)
+* [Semantic UI](https://semantic-ui.com)
