@@ -3,15 +3,43 @@
 <head>
   <%- css('/dist/semantic.min.css') %>
   <%- css('/style.css') %>
+  <%- css('/atom-one-dark.css') %>
   <%- js('/dist/semantic.min.js') %>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
 </head>
 
 <body>
   <div class="ui container">
     <%- partial('_partial/logo') %>
     <%- partial('_partial/menu') %>
-    <%- body %>
+    <div class="ui stackable grid">
+
+      <div class="four wide column">
+        <div class="ui teal raised segment">
+          <%- partial('_partial/profile') %>
+        </div>
+        <div class="ui vertical segment">
+          <h4>Recent Posts</h4>
+          <%- list_posts({order: 'desc'}) %>
+        </div>
+        <div class="ui vertical segment">
+          <h4>Tags</h4>
+          <%- tagcloud({
+            color: true,
+            order: 'desc',
+            start_color: 'grey',
+            end_color: 'red'
+          }) %>
+        </div>
+      </div>
+
+      <div class="twelve wide column"><%- body %></div>
+
+    </div>
   </div>
+
+  <%- partial('_partial/footer') %>
+  <script>hljs.initHighlightingOnLoad('atom-one-dark');</script>
 </body>
 
 </html>
