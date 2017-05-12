@@ -67,8 +67,8 @@ jupyter notebook --port=8888
 
 #### 4. Create SSH Tunnel
 <pre><code class="shell">
-ssh -N -L localhost:8888:localhost:8888 remote_username@remote_ip_address<
-/code></pre>
+ssh -N -L localhost:8888:localhost:8888 remote_username@remote_ip_address
+</code></pre>
 The external ip address will change every time you launch a new instance. You need get the remote_ip_address from step 1 every time. There must be a way to chain the two steps together, but I haven't explored to much on this.
 
 
