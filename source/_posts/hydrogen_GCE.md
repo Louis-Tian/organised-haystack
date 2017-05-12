@@ -2,34 +2,44 @@
 title: Hydrogen + Google Compute Engine
 subtitle: My setup for machine learning
 date: 2017-05-01
-categories:
-- coding
 tags:
 - Machine learning
 - Google Compute Engine
 - Atom
 - Hydrogen
 ---
+Recently, I started became addicted to the machine learning competitions on Kaggle.com.
 
-Recently started became addicted to Kaggle.com.
+I am relatively new to the whole ML business. After some long waiting for a died kernel or `Memory Error`, I realized my MacBook Pro isn't up for this kind of tasks. I started by contemplating invested in a new desktop. But hey it's 2017 having a desktop at home isn't the sexist idea. Then there comes Google offer $300 dollar for trying their cloud platform.
 
-### Why Google Compute Engine ?
+Hardware isn't the only problem. In ML, `Python` is the king. And when doing any kind of numerical stuff in `Python`, `Jupyter` is the go-to tool. However, keeping proper versioning for `jupyter notebook` has always been a difficult task.
 
-Two reasons:
-  1. Scalable
-  2. Economical
+And the perfect solution is ? `Jupyter` + `Hydrogen`. Here is how.
+
+<!--more-->
+
+### Why Google Compute Engine (GCE)?
+
+There are two main reasons:
+1. Scalable
+2. Economical
 
 Using GCE you can scale up and down as you wish, from a free single shared core micro instance up a 64-core beast machine with 416GB of RAM and 8 Tesla K80 GPU. If that's not enough, running a cluster of machines and sky is your limit.
 
 This is not only more flexible but also heaps cheaper. Economy of scale, as an economist would say. And that's not even the best part. Most of the time you can even run with "Preemptible" instances which makes things even cheaper.
 
-How does GCE compare against AWS, you ask? I don't know. But from what I hear, GCE is cheaper and has a way more intuitive UI.
+I won't go into the details of how to get an Google Compute Engine instance up and running. The guys
+at Google made it super easy, just go checkout the documentation [here](https://cloud.google.com/docs/)
+
+I don't really use AWS, so I won't comment on the difference. But the most steps will be the same for both platforms, other than the parts involves `gcloud` commands.
+
+The rest of the post will assume you have GCE setup and has the Google Cloud SDK installed.
 
 ### Why Hydrogen ?
 
-Two reasons:
-  1. Stay within the wonderful world of Atom.
-  2. Finally, proper version control for your Jupiter notebooks.
+`Hydrogen` is a `Atom` plugin. A very cool one. There are two main reasons of using it instead of vanilla `Jupyter` notebook in browser:
+1. Stay within the wonderful world of Atom.
+2. Finally, proper version control for your Jupiter notebooks.
 
 Atom has a who bunch of goodies to offer, VIM key binding, Git integration.
 
@@ -37,14 +47,45 @@ We all love Jupiter but VC is hard for Jupiter notebooks. It's `html` with both 
 Try to a diff between two commit... Let's face it, it's crap. With Hydrogen, finally, you can have a
 best of both world. Unlike Jupiter notebook, you write in a plain `.py` file.
 
-#### STEP#1 - Start google compute engine
+### Set Thing UP
 
+#### 1. Launch google cloud engine
 <pre><code class="shell">
-$ gcloud start instance_name
+$ gcloud compute instance start instance_name --zone=your_instance_zoon
 </code></pre>
 
-Not much is going on here. That's right.
 
-This part is the excerpt, get it with the
+#### 2. Turnoff Juptyer Token
+Go to `~/.jupyter/.jupyter_notebook_config.py` and set `c.Notebookapp.token=''` to disable token. Since, we will be using SSH, we will still be secure without the token.
 
-<!-- more -->
+
+#### 3. Start Jupyter
+<pre><code class="shell">
+jupyter notebook --port=8888
+</code></pre>
+
+
+#### 4. Create SSH Tunnel
+<pre><code class="shell">
+ssh -N -L localhost:8888:localhost:8888 remote_username@remote_ip_address<
+/code></pre>
+The external ip address will change every time you launch a new instance. You need get the remote_ip_address from step 1 every time. There must be a way to chain the two steps together, but I haven't explored to much on this.
+
+
+#### 5. Config Hydrogen
+Change the `Hydrogen`
+<pre><code class="javascript">
+[{
+  "name": "Google Compute Engine",
+  "options": { "baseUrl": "http://localhost:8888"}
+}]
+</code></pre>
+
+
+#### 6. Connect Remote Kernel
+* Go to your `.py` file.
+* type `cmd-shift-p` to bring up the command palette.
+* Search for`Hydrogen: Connect To Remote Kernel` and press enter.
+
+
+#### 7.  Enjoy and Happy Coding.
