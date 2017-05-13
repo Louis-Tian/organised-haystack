@@ -7,12 +7,12 @@ title: Organised Haystack
 subtitle: Louis' Blog
 description:
 author: Louis T.
-language:
+language: English
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://localhost:4000/
+url: http://louis-tian.github.io
 root: /
 permalink: :year-:month-:day-:title/
 permalink_defaults:
