@@ -1,0 +1,18 @@
+<div id="vertical-timeline" class="vertical-container dark-timeline center-orientation">
+  <% page.posts.each(function (post) { %>
+    <div class="vertical-timeline-block">
+        <div class="vertical-timeline-icon navy-bg">
+            <i class="ui laptop icon"></i>
+        </div>
+
+        <div class="vertical-timeline-content">
+            <h2><%- post.title %></h2>
+            <p><%- post.subtitle %></p>
+            <a href="<%- post.permalink %>" class="btn btn-sm btn-primary"> More info</a>
+            <span class="vertical-date">
+                <small><%- date(post.date, 'DD MMM YYYY') %></small>
+            </span>
+        </div>
+    </div>
+  <% }) %>
+</div>

@@ -65,6 +65,13 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: tesla
 
+# Archive
+archive_generator:
+  per_page: 100
+  yearly: true
+  monthly: false
+  daily: false
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
