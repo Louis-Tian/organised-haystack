@@ -6,6 +6,7 @@
       <div class="post date"><%- date(post.date, 'DD MMM YYYY') %></div>
       <div class='ui divider'></div>
       <%- post.content %>
+      <%- partial('_partial/disqus') %>
     </div>
   </div>
   <div class="divider"></div>
