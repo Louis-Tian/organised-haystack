@@ -8,13 +8,11 @@ tags:
 - Atom
 - Hydrogen
 ---
-Recently, I started became addicted to the machine learning competitions on Kaggle.com.
+Recently, I became obsessed with Kaggle. I am still new to this whole ML business. And not long after a few `died kernels` or `Memory Error`, I knew my MacBook Pro is not really up for the tasks at hand. I started contemplating on building a new desktop system. My old one is already half a decade old. But hey it's 2017 having a desktop isn't the sexist idea. Then there comes Google offer $300 credit for trying their cloud platform. Google Compute Engine become an obvious choice.
 
-I am relatively new to the whole ML business. After some long waiting for a died kernel or `Memory Error`, I realized my MacBook Pro isn't up for this kind of tasks. I started by contemplating invested in a new desktop. But hey it's 2017 having a desktop at home isn't the sexist idea. Then there comes Google offer $300 dollar for trying their cloud platform.
+Hardware isn't the only problem. In ML, `Python` is THE King. And when comes scientific computation `Jupyter` is the standard. However, keeping proper versioning in `Jupyter notebook` has always been a difficult task. Luckily, there is also solution to that as well. 'Atom' with `Hydrogen`.
 
-Hardware isn't the only problem. In ML, `Python` is the king. And when doing any kind of numerical stuff in `Python`, `Jupyter` is the go-to tool. However, keeping proper versioning for `jupyter notebook` has always been a difficult task.
-
-And the perfect solution is ? `Jupyter` + `Hydrogen`. Here is how.
+This post is about how setup this powerful combo? And start ruling the Machine learning word.
 
 <!--more-->
 
