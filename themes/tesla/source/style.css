@@ -9,6 +9,10 @@ div.ui.footer.segment {
   margin-top: 8em;
 }
 
+div.post.content {
+  min-height: 300px;
+}
+
 .post.title {
   margin: 0.5em 0em 0.5em 0em;
   line-height: 1.2em;

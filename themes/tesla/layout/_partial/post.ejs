@@ -1,11 +1,13 @@
-<div class="post">
+<div class="post ">
   <div class="ui stackable grid">
     <div class="twelve wide column">
       <div class="post title"><%- post.title %></div>
       <div class="post subtitle"><%- post.subtitle %></div>
       <div class="post date"><%- date(post.date, 'DD MMM YYYY') %></div>
       <div class='ui divider'></div>
-      <%- post.content %>
+      <div class="post content">
+        <%- post.content %>
+      </div>
       <%- partial('_partial/disqus') %>
     </div>
   </div>
