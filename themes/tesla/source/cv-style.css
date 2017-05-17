@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 9pt;
+}
+
+body {
+  font: 16px Helvetica, Sans-Serif;
+  line-height: 24px;
+  background: url(images/noise.jpg);
+}
+
+.clear {
+  clear: both;
+  margin: 20px;
+}
+
+#page-wrap {
+  width: 800px;
+  margin: 40px auto 60px;
+}
+
+#pic {
+  float: right;
+  margin: -30px 0 0 0;
+  width: 100px;
+  border-radius: 50%;
+}
+
+h1 {
+  font-family: "Roboto";
+  margin: 0 0 16px 0;
+  padding: 0 0 16px ;
+  font-size: 40px;
+  font-weight: bold;
+  border-bottom: 1px solid #999;
+}
+
+h2 {
+  color: teal;
+  font-size: 14px;
+  margin: 0 0 0 0;
+  position: relative;
+  border-bottom: 1px solid #baa;
+}
+
+h2:not(:first-child) {
+  margin: 15pt 0 0 0;
+}
+
+h2 span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+  color: #999;
+  font-weight: bold;
+}
+
+h2 small {
+  font-size: 10pt;
+  color: grey;
+  margin: 0 0 0 0;
+}
+
+ul {
+  color: #2a2a2a;
+  margin: 0 0 0 0;
+  list-style-position: inside;
+  line-height: 12pt;
+}
+
+ul.three.columns {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  list-style: none;
+}
+
+ul.two.columns {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  list-style: none;
+}
+
+#objective {
+  width: 500px;
+  float: left;
+  font-style: italic;
+  color: #666;
+}
+
+#profile {
+  position: relative;
+  right: 0px;
+  text-align: right;
+}
+
+dt {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: right;
+  padding: 0 20px 0 0;
+  width: 130px;
+  float: left;
+  height: 100px;
+  border-right: 1px solid #999;
+}
+
+dd {
+  width: 600px;
+  float: right;
+}
+
+dd.clear {
+  float: none;
+  margin: 0;
+  height: 15px;
+}
+
+.fa-star, .fa-star-o, .fa-star-half-full {
+  color: teal
+}
+
+.sep {
+  color: teal;
+  font-weight: 900;
+  font-size: 11pt;
+}
