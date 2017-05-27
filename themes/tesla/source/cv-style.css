@@ -4,6 +4,10 @@
   font-size: 9pt;
 }
 
+a {
+  color: grey
+}
+
 body {
   font: 16px Helvetica, Sans-Serif;
   line-height: 24px;
