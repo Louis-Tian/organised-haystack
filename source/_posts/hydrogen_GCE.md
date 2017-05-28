@@ -1,7 +1,7 @@
 ---
 title: Hydrogen + Google Compute Engine
 subtitle: My setup for machine learning
-date: 2017-05-01
+date: 2017-05-28
 tags:
 - Machine learning
 - Google Compute Engine

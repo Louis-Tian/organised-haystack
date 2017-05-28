@@ -4,18 +4,29 @@
   <%- css('/dist/semantic.min.css') %>
   <%- css('/style.css') %>
   <%- css('/atom-one-dark.css') %>
+
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+
   <%- js('/dist/semantic.min.js') %>
+
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
 </head>
 
 <body>
-  <div class="ui container">
-    <%- partial('_partial/logo') %>
+  <div class="ui fluid container" id="top-menu">
     <%- partial('_partial/menu') %>
+  </div>
+  <div class="ui container main-content">
     <div class="ui stackable grid">
+      <div class="twelve wide column">
+        <%- body %>
+      </div>
 
       <div class="four wide column">
-        <div class="ui teal raised segment">
+        <div class="ui">
           <%- partial('_partial/profile') %>
         </div>
         <div class="ui vertical segment">
@@ -32,14 +43,16 @@
           }) %>
         </div>
       </div>
-
-      <div class="twelve wide column"><%- body %></div>
-
     </div>
   </div>
 
   <%- partial('_partial/footer') %>
-  <script>hljs.initHighlightingOnLoad('atom-one-dark');</script>
+  <script>
+    hljs.initHighlightingOnLoad('atom-one-dark');
+    $('.special.cards .image').dimmer({
+      on: 'hover'
+    });
+  </script>
 </body>
 
 </html>

@@ -1,12 +1,9 @@
-<div class="ui one column grid">
-  <div class="center aligned column">
-
-    <div class="ui secondary pointing compact menu">
-      <a class="item <- is_home ? active: ''>" href='/'> Blog </a>
-      <a class="item" href='/portfolio'> Portfolio </a>
-      <a class="item"href='/archives'> Archive </a>
-      <a class="item"href='/cv'> CV </a>
-    </div>
-
+<div class="ui secondary pointing menu">
+  <div class="ui container">
+    <h1 class='page title ui aligned header'> Organised Haystack </h1>
   </div>
+  <a class="item <%- is_home() ? 'active': '' %>" href='/'> Blog </a>
+  <a class="item <%- is_current('portfolio') ? 'active': '' %>" href='/portfolio'> Portfolio </a>
+  <a class="item" href='/archives'> Archive </a>
+  <a class="item" href='/cv'> CV </a>
 </div>
